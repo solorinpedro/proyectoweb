@@ -1,0 +1,126 @@
+﻿@page "/articulo"
+
+<EditForm Model="@articulo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label" for="CodigoProducto">Código Producto</label>
+                <input type="text" class="form-control" id="CodigoProducto">
+                <label class="form-label" for="CodigoBarra">Código de Barra</label>
+                <input type="text" class="form-control" id="CodigoBarra">
+                <label class="form-label" for="Descripcion">Descripción</label>
+                <input type="text" class="form-control" id="Descripcion">
+                <label class="form-label" for="Referencia">Referencia</label>
+                <input type="text" class="form-control" id="Referencia">
+                <label class="form-label" for="Marca">Marca</label>
+                    <InputSelect id="Marca" class="form-control" @bind-Value="articulo.Marca">
+                    <option value="">Seleccionar Marca</option>
+                </InputSelect>
+                <label class="form-label" for="Almacen">Almacén</label>
+                <InputSelect id="Almacen" class="form-control" @bind-Value="articulo.Almacen">
+                    <option value="">Seleccionar Almacén</option>
+                    <label class="form-label" for="Ubicacion">Ubicación</label>
+                    <InputSelect id="Ubicacion" class="form-control" @bind-Value="articulo.Ubicacion">
+                        <option value="">Seleccionar Ubicación</option>
+                    </InputSelect>
+                </InputSelect>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <label class="form-label" for="Unidad">Unidad</label>
+                            <InputSelect id="Unidad" class="form-control" @bind-Value="articulo.Unidad">
+                                <option value="">Seleccionar Unidad</option>
+                            </InputSelect>
+                            <label class="form-label" for="Costo">Costo</label>
+                            <input type="text" class="form-control" id="Costo">
+                            <label class="form-label" for="Itbis">Itbis</label>
+                            <input type="text" class="form-control" id="Itbis">
+                            <label class="form-label" for="CostoItbis">Costo + Itbis</label>
+                            <input type="text" class="form-control" id="CostoItbis">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <label class="form-label" for="Precio1">Precio1</label>
+                            <input type="text" class="form-control" id="Precio1">
+
+                            <label class="form-label" for="Precio2">Precio2</label>
+                            <input type="text" class="form-control" id="Precio2">
+
+                            <label class="form-label" for="Precio3">Precio3</label>
+                            <input type="text" class="form-control" id="Precio3">
+
+                            <label class="form-label" for="Precio3">Precio4</label>
+                            <input type="text" class="form-control" id="Precio4">
+                        </div>
+                    </div>
+                </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="row">
+                    <!-- Columna para Existencia Inicial -->
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <label class="form-label" for="ExistenciaInicial">Existencia Inicial</label>
+                            <input type="text" class="form-control" id="ExistenciaInicial">
+                        </div>
+                    </div>
+                            <div class="col-md-6">
+                                <div class="mb-2">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" id="Descuento">
+                                </div>
+                            </div>
+
+
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Descuentos</label>
+                            <input type="text" class="form-control">
+          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </div>
+</EditForm>
+
+@code {
+    private ArticuloModel articulo = new ArticuloModel();
+
+    public class ArticuloModel
+    {
+        public string CodigoProducto { get; set; }
+        public string CodigoBarra { get; set; }
+        public string Descripcion { get; set; }
+        public string Referencia { get; set; }
+        public string Marca { get; set; }
+        public string Almacen { get; set; }
+        public string Ubicacion { get; set; }
+        public string Unidad { get; set; }
+        public decimal Costo { get; set; }
+        public decimal Itbis { get; set; }
+        public decimal CostoItbis { get; set; }
+        public decimal Precio1 { get; set; }
+        public decimal Precio2 { get; set; }
+        public decimal Precio3 { get; set; }
+        public decimal Precio4 { get; set; }
+
+
+
+        public decimal ExistenciaInicial { get; set; } // Asegúrate de agregar esta propiedad
+        // Agrega otras propiedades según tu modelo de datos
+    }
+}
