@@ -1,8 +1,49 @@
-﻿body {
-
+﻿.card-header {
+    background-color: #007bff; 
+    color: white; 
 }
 
-.form-label{
-    font-size:12px;
-    font-weight:bold;
+.form-control, .form-check-input, .form-label, .form-check-label {
+    font-size: 12px; 
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.custom-checkbox .form-check-input {
+    width: 15px;
+    height: 15px;
+}
+
+.form-label, .form-check-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.campo-adicional {
+    margin-top: -38px;
+}
+
+.btn-space {
+    margin-top: -5px;
+}
+
+.btn-danger {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.tercer-contenedor {
+    min-height: 195px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px; 
 }
